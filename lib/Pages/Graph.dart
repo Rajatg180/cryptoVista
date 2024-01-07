@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -24,7 +23,9 @@ class _GraphViewState extends State<GraphView> {
 
   void toggleDate(int index) async {
     setState(() {
-      for (int buttonIndex = 0; buttonIndex < isSelected.length; buttonIndex++) {
+      for (int buttonIndex = 0;
+          buttonIndex < isSelected.length;
+          buttonIndex++) {
         if (buttonIndex == index) {
           isSelected[buttonIndex] = true;
         } else {
@@ -56,7 +57,6 @@ class _GraphViewState extends State<GraphView> {
     setState(() {
       isLoading = false;
     });
-    
   }
 
   void initializeInitialGraph() async {
@@ -91,12 +91,14 @@ class _GraphViewState extends State<GraphView> {
               children: [
                 Consumer<MarketProvider>(
                   builder: (context, marketProvider, child) {
-                    CryptoCurrency currentCrypto = marketProvider.fetchCryptoById(widget.id);
+                    CryptoCurrency currentCrypto =
+                        marketProvider.fetchCryptoById(widget.id);
                     return Column(
                       children: [
                         Text(
                           currentCrypto.name!,
-                          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                          style: const TextStyle(
+                              fontSize: 40, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 10),
                         Center(

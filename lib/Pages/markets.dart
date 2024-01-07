@@ -25,8 +25,12 @@ class _MarketsState extends State<Markets> {
         } else {
           if (marketProvider.markets.isNotEmpty) {
             return RefreshIndicator(
-              onRefresh: () async {
-                await marketProvider.fetchData();
+              // onRefresh: () async {
+              //   await marketProvider.fetchData();
+              // },
+              // to avoid the limit of api i have stop refresh 
+              onRefresh: ()async{
+
               },
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(

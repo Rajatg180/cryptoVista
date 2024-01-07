@@ -38,11 +38,11 @@ class MarketProvider with ChangeNotifier{
         notifyListeners();
 
     //     calling fetchData() after every 3 second to load the updated data
-    //     Timer(const Duration(seconds: 3), () {
-    //       fetchData();
-    //     });
-
+        Timer(const Duration(seconds: 180), () {
+          fetchData();
+        });
     }
+
 
     // for detail page getting the crypto details for single id
     CryptoCurrency fetchCryptoById(String id) {
