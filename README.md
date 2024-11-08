@@ -1,16 +1,10 @@
-# cryptotracker
+# CryptoVista
 
-A new Flutter project.
+<img src="https://github.com/user-attachments/assets/3b8d6d67-2bc0-4a6e-98f9-0b0c73e5890f" width="300" height="600"> 
+<img src="https://github.com/user-attachments/assets/88b3ef68-d952-42a2-a635-d790b5eeedc9" width="300" height="600"> 
+<img src="https://github.com/user-attachments/assets/9994ba98-c646-470b-a2bf-76300e271a44" width="300" height="600"> 
+<img src="https://github.com/user-attachments/assets/f800c6b0-07af-454c-b143-d6b2fd6260aa" width="300" height="600"> 
+<img src="https://github.com/user-attachments/assets/81f87399-0dc7-44b0-aec9-adff0f2e05aa" width="300" height="600"> 
+<img src="https://github.com/user-attachments/assets/c7f516f7-b088-4268-b523-f67e0c261e25" width="300" height="600"> 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
