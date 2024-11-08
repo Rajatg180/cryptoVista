@@ -1,12 +1,9 @@
-import 'package:cryptotracker/Models/cryptocurrency.dart';
 import 'package:cryptotracker/Pages/News.dart';
 import 'package:cryptotracker/Pages/favorites.dart';
 import 'package:cryptotracker/Pages/markets.dart';
 import 'package:cryptotracker/Provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,7 +24,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    ThemeProvider themeProvider = Provider.of<ThemeProvider>(context, listen: false);
+    
+    ThemeProvider themeProvider =
+        Provider.of<ThemeProvider>(context, listen: false);
 
     return Scaffold(
       body: SafeArea(
@@ -83,9 +82,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                   ),
                   Tab(
-                      child: Text(
-                    "Favorites",
-                     style: Theme.of(context).textTheme.bodyLarge,
+                    child: Text(
+                      "Favorites",
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                   Tab(
@@ -96,17 +95,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                 ],
               ),
-              Expanded(child :TabBarView(
-                physics: const BouncingScrollPhysics(
+              Expanded(
+                child: TabBarView(
+                  physics: const BouncingScrollPhysics(
                     parent: AlwaysScrollableScrollPhysics(),
+                  ),
+                  controller: viewController,
+                  children: [
+                    Markets(),
+                    Favorites(),
+                    News(),
+                  ],
                 ),
-                controller: viewController,
-                children: [
-                  Markets(),
-                  Favorites(),
-                  News(),
-                ],
-              ),),
+              ),
             ],
           ),
         ),

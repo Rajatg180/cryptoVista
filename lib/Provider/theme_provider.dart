@@ -2,6 +2,7 @@ import 'package:cryptotracker/Models/local_storage.dart';
 import 'package:flutter/material.dart';
 
 class ThemeProvider with ChangeNotifier{
+
   late ThemeMode themeMode;
 
   ThemeProvider(String theme){
@@ -16,6 +17,7 @@ class ThemeProvider with ChangeNotifier{
 
 
   void toggleTheme() async {
+
     if(themeMode == ThemeMode.light){
        themeMode=ThemeMode.dark;
        await LocalStorage.saveTheme("dark");
@@ -24,6 +26,7 @@ class ThemeProvider with ChangeNotifier{
       themeMode=ThemeMode.light;
       await LocalStorage.saveTheme("light");
     }
+    
     notifyListeners();
   }
 

@@ -25,10 +25,13 @@ class MarketProvider with ChangeNotifier{
         List<CryptoCurrency> temp=[];
 
         for(var market in _markets){
+
             CryptoCurrency newCrypto = CryptoCurrency.fromJson(market);
 
             if(favorites.contains(newCrypto.id!)){
+
                 newCrypto.isFavourite = true;
+                
             }
             temp.add(newCrypto);
         }

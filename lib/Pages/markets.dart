@@ -1,4 +1,4 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:cryptotracker/Widgets/listtile.ddart.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,6 +16,7 @@ class Markets extends StatefulWidget {
 }
 
 class _MarketsState extends State<Markets> {
+
   @override
   Widget build(BuildContext context) {
     return Consumer<MarketProvider>(

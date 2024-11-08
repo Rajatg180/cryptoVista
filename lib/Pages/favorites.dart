@@ -14,8 +14,11 @@ class Favorites extends StatefulWidget {
 class _FavoritesState extends State<Favorites> {
   @override
   Widget build(BuildContext context) {
+    
    return Consumer<MarketProvider>(
+
        builder: (context,marketProvider,child){
+
          List<CryptoCurrency> favorites=marketProvider.markets.where((element)=>element.isFavourite==true).toList();
 
          if(favorites.isNotEmpty){

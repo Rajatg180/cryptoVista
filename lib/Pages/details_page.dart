@@ -204,7 +204,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                       );
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      primary: Colors.indigoAccent,
+                                      // primary: Colors.indigoAccent,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(8.0),

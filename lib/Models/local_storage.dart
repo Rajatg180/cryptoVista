@@ -1,6 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalStorage{
+  
   // using shared Preferences to store the theme of app in local storage
 
   // set theme

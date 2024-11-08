@@ -11,13 +11,19 @@ class GraphProvider with ChangeNotifier {
     List<dynamic> priceData = await API.fetchGraphData(id, days);
 
     List<GraphPoint> temp = [];
+
     for(var pricePoint in priceData) {
+
       GraphPoint graphPoint = GraphPoint.fromList(pricePoint);
+
       temp.add(graphPoint);
+      
     }
 
     graphPoints = temp;
+
     notifyListeners();
+
   }
 
 }

@@ -11,13 +11,21 @@ class News extends StatefulWidget {
 }
 
 class _NewsPageState extends State<News> {
+  
   @override
   Widget build(BuildContext context) {
+
     ThemeProvider themeProvider = Provider.of<ThemeProvider>(context, listen: false);
+
     return Consumer<NewsProvider>(
+
       builder: (context, newProvider, child) {
+        
         if (newProvider.isLoading) {
+
           return const Center(child: CircularProgressIndicator());
+
+
         } else {
           if (newProvider.news.isNotEmpty) {
             return RefreshIndicator(
@@ -92,7 +100,7 @@ class _NewsPageState extends State<News> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    currentNews.title.toString() ?? "No Title",
+                                    currentNews.title.toString() ??  "No Title",
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 2,
                                     style: const TextStyle(

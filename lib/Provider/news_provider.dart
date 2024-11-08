@@ -3,8 +3,11 @@ import 'package:cryptotracker/Models/news.dart';
 import 'package:flutter/material.dart';
 
 class NewsProvider with ChangeNotifier{
+
   NewsProvider(){
+
     fetchData();
+
   }
 
   bool isLoading = true ;
@@ -22,11 +25,15 @@ class NewsProvider with ChangeNotifier{
       News newNews = News.fromJson(news);
 
       temp.add(newNews);
+      
     }
 
     news=temp;
+
     isLoading=false;
+
     notifyListeners();
+
   }
 
 }

@@ -1,4 +1,5 @@
 class GraphPoint {
+  
   DateTime? date;
   double? price;
 
